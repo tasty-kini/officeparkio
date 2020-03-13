@@ -1165,6 +1165,7 @@ extern const uint32_t Mathf_Floor_mD447D35DE1D81DE09C2EFE21A75F0444E2AEF9E1_Meta
 extern const uint32_t Mathf_InverseLerp_m7054CDF25056E9B27D2467F91C95D628508F1F31_MetadataUsageId;
 extern const uint32_t Mathf_Lerp_m9A74C5A0C37D0CDF45EE66E7774D12A9B93B1364_MetadataUsageId;
 extern const uint32_t Mathf_Log_mD0CFD1242805BD697B5156AA46FBB43E7636A19B_MetadataUsageId;
+extern const uint32_t Mathf_MoveTowards_m3B267066E774818E369220B0ABD084B271B45A85_MetadataUsageId;
 extern const uint32_t Mathf_Pow_mC1BFA8F6235567CBB31F3D9507A6275635A38B5F_MetadataUsageId;
 extern const uint32_t Mathf_Repeat_m8459F4AAFF92DB770CC892BF71EE9438D9D0F779_MetadataUsageId;
 extern const uint32_t Mathf_RoundToInt_m0EAD8BD38FCB72FA1D8A04E96337C820EC83F041_MetadataUsageId;
@@ -17761,6 +17762,8 @@ extern "C" IL2CPP_METHOD_ATTR Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  M
 extern "C" IL2CPP_METHOD_ATTR Texture_t387FE83BB848001FD06B14707AEA6D5A0F6A95F4 * Material_GetTextureImpl_m19D8CE6C5701AC4B69A6D5354E08240DF6C036D2 (Material_tF7DB3BF0C24DEC2FE0CB51E5DF5053D5223C8598 * __this, int32_t ___name0, const RuntimeMethod* method);
 // System.Double System.Math::Log(System.Double,System.Double)
 extern "C" IL2CPP_METHOD_ATTR double Math_Log_m5C457D6A666677B3E260C571049528D5BE93B7AF (double p0, double p1, const RuntimeMethod* method);
+// System.Single UnityEngine.Mathf::Sign(System.Single)
+extern "C" IL2CPP_METHOD_ATTR float Mathf_Sign_m6FA1D12786BEE0419D4B9426E5E4955F286BC8D3 (float ___f0, const RuntimeMethod* method);
 // System.Single UnityEngine.Mathf::Max(System.Single,System.Single)
 extern "C" IL2CPP_METHOD_ATTR float Mathf_Max_m670AE0EC1B09ED1A56FF9606B0F954670319CB65 (float ___a0, float ___b1, const RuntimeMethod* method);
 // System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
@@ -31127,16 +31130,6 @@ extern "C" IL2CPP_METHOD_ATTR bool Input_GetButtonDown_mBCFF01DD979D2BE061A8F470
 	bool retVal = _il2cpp_icall_func(___buttonName0);
 	return retVal;
 }
-// System.Boolean UnityEngine.Input::GetButtonUp(System.String)
-extern "C" IL2CPP_METHOD_ATTR bool Input_GetButtonUp_m4A4FE2D2191747FE5181289A0C99FEA307E0238C (String_t* ___buttonName0, const RuntimeMethod* method)
-{
-	typedef bool (*Input_GetButtonUp_m4A4FE2D2191747FE5181289A0C99FEA307E0238C_ftn) (String_t*);
-	static Input_GetButtonUp_m4A4FE2D2191747FE5181289A0C99FEA307E0238C_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Input_GetButtonUp_m4A4FE2D2191747FE5181289A0C99FEA307E0238C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetButtonUp(System.String)");
-	bool retVal = _il2cpp_icall_func(___buttonName0);
-	return retVal;
-}
 // System.Boolean UnityEngine.Input::GetMouseButton(System.Int32)
 extern "C" IL2CPP_METHOD_ATTR bool Input_GetMouseButton_mFA83B0C0BABD3113D1AAB38FBB953C91EA7FFA30 (int32_t ___button0, const RuntimeMethod* method)
 {
@@ -33371,6 +33364,51 @@ IL_0013:
 	{
 		float L_5 = V_0;
 		return L_5;
+	}
+}
+// System.Single UnityEngine.Mathf::MoveTowards(System.Single,System.Single,System.Single)
+extern "C" IL2CPP_METHOD_ATTR float Mathf_MoveTowards_m3B267066E774818E369220B0ABD084B271B45A85 (float ___current0, float ___target1, float ___maxDelta2, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Mathf_MoveTowards_m3B267066E774818E369220B0ABD084B271B45A85_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	{
+		float L_0 = ___target1;
+		float L_1 = ___current0;
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_tFBDE6467D269BFE410605C7D806FD9991D4A89CB_il2cpp_TypeInfo_var);
+		float L_2 = fabsf(((float)il2cpp_codegen_subtract((float)L_0, (float)L_1)));
+		float L_3 = ___maxDelta2;
+		if ((!(((float)L_2) <= ((float)L_3))))
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		float L_4 = ___target1;
+		V_0 = L_4;
+		goto IL_0028;
+	}
+
+IL_0016:
+	{
+		float L_5 = ___current0;
+		float L_6 = ___target1;
+		float L_7 = ___current0;
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_tFBDE6467D269BFE410605C7D806FD9991D4A89CB_il2cpp_TypeInfo_var);
+		float L_8 = Mathf_Sign_m6FA1D12786BEE0419D4B9426E5E4955F286BC8D3(((float)il2cpp_codegen_subtract((float)L_6, (float)L_7)), /*hidden argument*/NULL);
+		float L_9 = ___maxDelta2;
+		V_0 = ((float)il2cpp_codegen_add((float)L_5, (float)((float)il2cpp_codegen_multiply((float)L_8, (float)L_9))));
+		goto IL_0028;
+	}
+
+IL_0028:
+	{
+		float L_10 = V_0;
+		return L_10;
 	}
 }
 // System.Boolean UnityEngine.Mathf::Approximately(System.Single,System.Single)
