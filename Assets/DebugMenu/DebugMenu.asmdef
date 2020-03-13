@@ -1,0 +1,15 @@
+{
+    "name": "DebugMenu",
+    "references": [
+        "Unity.TextMeshPro",
+        "ABManager"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
