@@ -97,40 +97,30 @@ public class swipeToMove : MonoBehaviour
             }
 
             Vector2 playerInput = Input.GetTouch(0).deltaPosition; // find vector of player touch 
-           // Debug.Log("player input: " + playerInput.magnitude);
-            if(playerInput.magnitude == 0)
-            {
-                //Debug.Log("zero input: " + newDelta);
-            }
-
 
             if(playerInput.magnitude > kickDetermineForce)
             {
                 if(canKick)
                 {
-                    
                     if (playerInput.magnitude > inputClamp) playerInput = playerInput.normalized * inputClamp; //clamp big values
                     newDelta = new Vector3(playerInput.x, 0, playerInput.y);
                     kickForward(newDelta, 1);
-
                 }
-                
             }
-            
 
+            playerInput /= inputSoftener; // soften touch value
             if (playerInput.magnitude > minTouch) //ensure big enough touch is made
             {
-                playerInput /= inputSoftener; // soften touch value
+                //Debug.Log(playerInput.magnitude + " > " + minTouch);
 
                 if (playerInput.magnitude > inputClamp) playerInput = playerInput.normalized * inputClamp; //clamp big values
                 newDelta = new Vector3(playerInput.x, 0, playerInput.y);
+                Debug.Log("updated newDelta: " + newDelta.magnitude);
             }
-            Debug.Log(newDelta);
 
-            peddleForward(newDelta.normalized); // smooth movement towards touch
-                
-                quickLook(); //rotate player to look at touch
+            peddleForward(newDelta); // smooth movement towards touch
 
+            quickLook(); //rotate player to look at touch
 
             if (Input.GetTouch(0).phase == TouchPhase.Ended) // 
             {
@@ -141,14 +131,8 @@ public class swipeToMove : MonoBehaviour
                     kickForward(newDelta, 2);   //kick player forward based on touch length
                     quickLook();
                 }
-               
-                
             }
 
-        }
-        if (rb.velocity.magnitude > maxVelocity)
-        {
-            //rb.velocity.magnitude = maxVelocity;
         }
 
     }

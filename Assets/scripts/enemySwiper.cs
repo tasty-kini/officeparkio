@@ -470,7 +470,7 @@ public class enemySwiper : MonoBehaviour
 
     public void becomeAgro(GameObject other)
     {
-        Debug.Log("become agro");
+        //Debug.Log("become agro");
         isAgro = true;
         agroTimerStamp = Time.time + agroTime;
         targetEnemy = other.gameObject;
@@ -485,7 +485,7 @@ public class enemySwiper : MonoBehaviour
 
     public void trySlow()
     {
-        Debug.Log("trying slow");
+        //Debug.Log("trying slow");
         float totalChance = Random.Range(1, 101);
         if (totalChance < chanceSlow) // run away from player
         {

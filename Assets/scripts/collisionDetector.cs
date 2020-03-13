@@ -39,7 +39,7 @@ public class collisionDetector : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
 
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
 
         //Debug.Log(collision.relativeVelocity.magnitude);
         if(!onColCD)
@@ -73,7 +73,7 @@ public class collisionDetector : MonoBehaviour
 
                     if (myVel < collision.gameObject.GetComponent<collisionDetector>().myVel && GetComponent<enemySwiper>().isAlive)
                     {
-                        Debug.Log("enemy tries to fall over");
+                        //Debug.Log("enemy tries to fall over");
                         newCalculateProbability(collision);
                         goOnCD();
                     }
