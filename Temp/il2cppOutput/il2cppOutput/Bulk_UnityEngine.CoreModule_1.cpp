@@ -20352,6 +20352,16 @@ extern "C" IL2CPP_METHOD_ATTR float Time_get_deltaTime_m16F98FC9BA931581236008C2
 	float retVal = _il2cpp_icall_func();
 	return retVal;
 }
+// System.Single UnityEngine.Time::get_fixedTime()
+extern "C" IL2CPP_METHOD_ATTR float Time_get_fixedTime_mA81C3C1F2161F09735E2547A91539618D4D71E9E (const RuntimeMethod* method)
+{
+	typedef float (*Time_get_fixedTime_mA81C3C1F2161F09735E2547A91539618D4D71E9E_ftn) ();
+	static Time_get_fixedTime_mA81C3C1F2161F09735E2547A91539618D4D71E9E_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Time_get_fixedTime_mA81C3C1F2161F09735E2547A91539618D4D71E9E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Time::get_fixedTime()");
+	float retVal = _il2cpp_icall_func();
+	return retVal;
+}
 // System.Single UnityEngine.Time::get_unscaledTime()
 extern "C" IL2CPP_METHOD_ATTR float Time_get_unscaledTime_m57F78B855097C5BA632CF9BE60667A9DEBCAA472 (const RuntimeMethod* method)
 {

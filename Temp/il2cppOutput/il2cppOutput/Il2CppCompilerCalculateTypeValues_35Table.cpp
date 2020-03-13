@@ -6058,12 +6058,26 @@ public:
 	DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * ___accelerationSpeed_7;
 	// Tastypill.Debug.DebugFloat PlayerMovement::decelerationSpeed
 	DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * ___decelerationSpeed_8;
+	// Tastypill.Debug.DebugFloat PlayerMovement::rotationSpeed
+	DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * ___rotationSpeed_9;
+	// Tastypill.Debug.DebugFloat PlayerMovement::dashForce
+	DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * ___dashForce_10;
+	// Tastypill.Debug.DebugFloat PlayerMovement::dashMaxSpeed
+	DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * ___dashMaxSpeed_11;
+	// Tastypill.Debug.DebugFloat PlayerMovement::dashSwipeLength
+	DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * ___dashSwipeLength_12;
+	// Tastypill.Debug.DebugFloat PlayerMovement::kickCD
+	DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * ___kickCD_13;
 	// UnityEngine.Vector2 PlayerMovement::tapStartPosition
-	Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  ___tapStartPosition_9;
+	Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  ___tapStartPosition_14;
 	// System.Single PlayerMovement::moveSpeed
-	float ___moveSpeed_10;
+	float ___moveSpeed_15;
 	// UnityEngine.Vector3 PlayerMovement::lastPlayerInput
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___lastPlayerInput_11;
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___lastPlayerInput_16;
+	// System.Boolean PlayerMovement::canKick
+	bool ___canKick_17;
+	// System.Single PlayerMovement::kickCDStamp
+	float ___kickCDStamp_18;
 
 public:
 	inline static int32_t get_offset_of_rb_4() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___rb_4)); }
@@ -6111,28 +6125,89 @@ public:
 		Il2CppCodeGenWriteBarrier((&___decelerationSpeed_8), value);
 	}
 
-	inline static int32_t get_offset_of_tapStartPosition_9() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___tapStartPosition_9)); }
-	inline Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  get_tapStartPosition_9() const { return ___tapStartPosition_9; }
-	inline Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * get_address_of_tapStartPosition_9() { return &___tapStartPosition_9; }
-	inline void set_tapStartPosition_9(Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  value)
+	inline static int32_t get_offset_of_rotationSpeed_9() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___rotationSpeed_9)); }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * get_rotationSpeed_9() const { return ___rotationSpeed_9; }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F ** get_address_of_rotationSpeed_9() { return &___rotationSpeed_9; }
+	inline void set_rotationSpeed_9(DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * value)
 	{
-		___tapStartPosition_9 = value;
+		___rotationSpeed_9 = value;
+		Il2CppCodeGenWriteBarrier((&___rotationSpeed_9), value);
 	}
 
-	inline static int32_t get_offset_of_moveSpeed_10() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___moveSpeed_10)); }
-	inline float get_moveSpeed_10() const { return ___moveSpeed_10; }
-	inline float* get_address_of_moveSpeed_10() { return &___moveSpeed_10; }
-	inline void set_moveSpeed_10(float value)
+	inline static int32_t get_offset_of_dashForce_10() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___dashForce_10)); }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * get_dashForce_10() const { return ___dashForce_10; }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F ** get_address_of_dashForce_10() { return &___dashForce_10; }
+	inline void set_dashForce_10(DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * value)
 	{
-		___moveSpeed_10 = value;
+		___dashForce_10 = value;
+		Il2CppCodeGenWriteBarrier((&___dashForce_10), value);
 	}
 
-	inline static int32_t get_offset_of_lastPlayerInput_11() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___lastPlayerInput_11)); }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_lastPlayerInput_11() const { return ___lastPlayerInput_11; }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_lastPlayerInput_11() { return &___lastPlayerInput_11; }
-	inline void set_lastPlayerInput_11(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	inline static int32_t get_offset_of_dashMaxSpeed_11() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___dashMaxSpeed_11)); }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * get_dashMaxSpeed_11() const { return ___dashMaxSpeed_11; }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F ** get_address_of_dashMaxSpeed_11() { return &___dashMaxSpeed_11; }
+	inline void set_dashMaxSpeed_11(DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * value)
 	{
-		___lastPlayerInput_11 = value;
+		___dashMaxSpeed_11 = value;
+		Il2CppCodeGenWriteBarrier((&___dashMaxSpeed_11), value);
+	}
+
+	inline static int32_t get_offset_of_dashSwipeLength_12() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___dashSwipeLength_12)); }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * get_dashSwipeLength_12() const { return ___dashSwipeLength_12; }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F ** get_address_of_dashSwipeLength_12() { return &___dashSwipeLength_12; }
+	inline void set_dashSwipeLength_12(DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * value)
+	{
+		___dashSwipeLength_12 = value;
+		Il2CppCodeGenWriteBarrier((&___dashSwipeLength_12), value);
+	}
+
+	inline static int32_t get_offset_of_kickCD_13() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___kickCD_13)); }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * get_kickCD_13() const { return ___kickCD_13; }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F ** get_address_of_kickCD_13() { return &___kickCD_13; }
+	inline void set_kickCD_13(DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * value)
+	{
+		___kickCD_13 = value;
+		Il2CppCodeGenWriteBarrier((&___kickCD_13), value);
+	}
+
+	inline static int32_t get_offset_of_tapStartPosition_14() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___tapStartPosition_14)); }
+	inline Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  get_tapStartPosition_14() const { return ___tapStartPosition_14; }
+	inline Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * get_address_of_tapStartPosition_14() { return &___tapStartPosition_14; }
+	inline void set_tapStartPosition_14(Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  value)
+	{
+		___tapStartPosition_14 = value;
+	}
+
+	inline static int32_t get_offset_of_moveSpeed_15() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___moveSpeed_15)); }
+	inline float get_moveSpeed_15() const { return ___moveSpeed_15; }
+	inline float* get_address_of_moveSpeed_15() { return &___moveSpeed_15; }
+	inline void set_moveSpeed_15(float value)
+	{
+		___moveSpeed_15 = value;
+	}
+
+	inline static int32_t get_offset_of_lastPlayerInput_16() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___lastPlayerInput_16)); }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_lastPlayerInput_16() const { return ___lastPlayerInput_16; }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_lastPlayerInput_16() { return &___lastPlayerInput_16; }
+	inline void set_lastPlayerInput_16(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	{
+		___lastPlayerInput_16 = value;
+	}
+
+	inline static int32_t get_offset_of_canKick_17() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___canKick_17)); }
+	inline bool get_canKick_17() const { return ___canKick_17; }
+	inline bool* get_address_of_canKick_17() { return &___canKick_17; }
+	inline void set_canKick_17(bool value)
+	{
+		___canKick_17 = value;
+	}
+
+	inline static int32_t get_offset_of_kickCDStamp_18() { return static_cast<int32_t>(offsetof(PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C, ___kickCDStamp_18)); }
+	inline float get_kickCDStamp_18() const { return ___kickCDStamp_18; }
+	inline float* get_address_of_kickCDStamp_18() { return &___kickCDStamp_18; }
+	inline void set_kickCDStamp_18(float value)
+	{
+		___kickCDStamp_18 = value;
 	}
 };
 
@@ -7882,74 +7957,78 @@ public:
 	DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * ___dbigKickForce_14;
 	// Tastypill.Debug.DebugFloat swipeToMove::dkickCD
 	DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * ___dkickCD_15;
+	// Tastypill.Debug.DebugFloat swipeToMove::dMaxDragouch
+	DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * ___dMaxDragouch_16;
 	// System.Single swipeToMove::burstForce
-	float ___burstForce_16;
+	float ___burstForce_17;
 	// System.Single swipeToMove::burstMultiplier
-	float ___burstMultiplier_17;
+	float ___burstMultiplier_18;
 	// System.Single swipeToMove::burstMin
-	float ___burstMin_18;
+	float ___burstMin_19;
 	// System.Single swipeToMove::burstMax
-	float ___burstMax_19;
+	float ___burstMax_20;
 	// UnityEngine.Rigidbody swipeToMove::rb
-	Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * ___rb_20;
+	Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * ___rb_21;
 	// System.Boolean swipeToMove::isRotating
-	bool ___isRotating_21;
+	bool ___isRotating_22;
 	// UnityEngine.Animator swipeToMove::anim
-	Animator_tF1A88E66B3B731DDA75A066DBAE9C55837660F5A * ___anim_22;
-	// UnityEngine.Vector3 swipeToMove::startTouch
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___startTouch_23;
-	// UnityEngine.Vector3 swipeToMove::endTouch
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___endTouch_24;
-	// UnityEngine.Vector3 swipeToMove::curTouch
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___curTouch_25;
+	Animator_tF1A88E66B3B731DDA75A066DBAE9C55837660F5A * ___anim_23;
+	// UnityEngine.Vector2 swipeToMove::startTouch
+	Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  ___startTouch_24;
+	// UnityEngine.Vector2 swipeToMove::endTouch
+	Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  ___endTouch_25;
+	// UnityEngine.Vector2 swipeToMove::curTouch
+	Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  ___curTouch_26;
 	// System.Single swipeToMove::touchDistance
-	float ___touchDistance_26;
+	float ___touchDistance_27;
 	// System.Single swipeToMove::minTouchDistance
-	float ___minTouchDistance_27;
+	float ___minTouchDistance_28;
 	// System.Boolean swipeToMove::isAlive
-	bool ___isAlive_28;
+	bool ___isAlive_29;
 	// System.Single swipeToMove::touchStartTime
-	float ___touchStartTime_29;
+	float ___touchStartTime_30;
 	// System.Single swipeToMove::touchEndTime
-	float ___touchEndTime_30;
+	float ___touchEndTime_31;
 	// System.Single swipeToMove::touchMultiplier
-	float ___touchMultiplier_31;
+	float ___touchMultiplier_32;
 	// System.Single swipeToMove::maxTouchTime
-	float ___maxTouchTime_32;
+	float ___maxTouchTime_33;
 	// System.Single swipeToMove::minTouchMultiplier
-	float ___minTouchMultiplier_33;
+	float ___minTouchMultiplier_34;
 	// UnityEngine.Vector3 swipeToMove::newDelta
-	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___newDelta_34;
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___newDelta_35;
 	// System.Single swipeToMove::rotSpeed
-	float ___rotSpeed_35;
+	float ___rotSpeed_36;
 	// System.Single swipeToMove::minTouch
-	float ___minTouch_36;
+	float ___minTouch_37;
 	// System.Single swipeToMove::maxVelocity
-	float ___maxVelocity_37;
+	float ___maxVelocity_38;
 	// System.Single swipeToMove::inputSoftener
-	float ___inputSoftener_38;
+	float ___inputSoftener_39;
 	// System.Single swipeToMove::inputClamp
-	float ___inputClamp_39;
+	float ___inputClamp_40;
 	// System.Boolean swipeToMove::needToSlerp
-	bool ___needToSlerp_40;
+	bool ___needToSlerp_41;
 	// System.Single swipeToMove::slerpT
-	float ___slerpT_41;
+	float ___slerpT_42;
 	// System.Single swipeToMove::slerpTStamp
-	float ___slerpTStamp_42;
+	float ___slerpTStamp_43;
 	// System.Single swipeToMove::kickDetermineForce
-	float ___kickDetermineForce_43;
+	float ___kickDetermineForce_44;
 	// System.Single swipeToMove::kickCDTime
-	float ___kickCDTime_44;
+	float ___kickCDTime_45;
 	// System.Single swipeToMove::kickCDStamp
-	float ___kickCDStamp_45;
+	float ___kickCDStamp_46;
 	// System.Single swipeToMove::kickForce
-	float ___kickForce_46;
+	float ___kickForce_47;
 	// System.Single swipeToMove::bigKickForce
-	float ___bigKickForce_47;
+	float ___bigKickForce_48;
 	// System.Boolean swipeToMove::canKick
-	bool ___canKick_48;
+	bool ___canKick_49;
 	// System.Single swipeToMove::mediumTouch
-	float ___mediumTouch_49;
+	float ___mediumTouch_50;
+	// System.Single swipeToMove::maxDragDistance
+	float ___maxDragDistance_51;
 
 public:
 	inline static int32_t get_offset_of_peddleSpeed_4() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___peddleSpeed_4)); }
@@ -8060,278 +8139,295 @@ public:
 		Il2CppCodeGenWriteBarrier((&___dkickCD_15), value);
 	}
 
-	inline static int32_t get_offset_of_burstForce_16() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___burstForce_16)); }
-	inline float get_burstForce_16() const { return ___burstForce_16; }
-	inline float* get_address_of_burstForce_16() { return &___burstForce_16; }
-	inline void set_burstForce_16(float value)
+	inline static int32_t get_offset_of_dMaxDragouch_16() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___dMaxDragouch_16)); }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * get_dMaxDragouch_16() const { return ___dMaxDragouch_16; }
+	inline DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F ** get_address_of_dMaxDragouch_16() { return &___dMaxDragouch_16; }
+	inline void set_dMaxDragouch_16(DebugFloat_t2FD8B1F7AD8AC759C1DAD75B7CDE815FE4198A7F * value)
 	{
-		___burstForce_16 = value;
+		___dMaxDragouch_16 = value;
+		Il2CppCodeGenWriteBarrier((&___dMaxDragouch_16), value);
 	}
 
-	inline static int32_t get_offset_of_burstMultiplier_17() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___burstMultiplier_17)); }
-	inline float get_burstMultiplier_17() const { return ___burstMultiplier_17; }
-	inline float* get_address_of_burstMultiplier_17() { return &___burstMultiplier_17; }
-	inline void set_burstMultiplier_17(float value)
+	inline static int32_t get_offset_of_burstForce_17() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___burstForce_17)); }
+	inline float get_burstForce_17() const { return ___burstForce_17; }
+	inline float* get_address_of_burstForce_17() { return &___burstForce_17; }
+	inline void set_burstForce_17(float value)
 	{
-		___burstMultiplier_17 = value;
+		___burstForce_17 = value;
 	}
 
-	inline static int32_t get_offset_of_burstMin_18() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___burstMin_18)); }
-	inline float get_burstMin_18() const { return ___burstMin_18; }
-	inline float* get_address_of_burstMin_18() { return &___burstMin_18; }
-	inline void set_burstMin_18(float value)
+	inline static int32_t get_offset_of_burstMultiplier_18() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___burstMultiplier_18)); }
+	inline float get_burstMultiplier_18() const { return ___burstMultiplier_18; }
+	inline float* get_address_of_burstMultiplier_18() { return &___burstMultiplier_18; }
+	inline void set_burstMultiplier_18(float value)
 	{
-		___burstMin_18 = value;
+		___burstMultiplier_18 = value;
 	}
 
-	inline static int32_t get_offset_of_burstMax_19() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___burstMax_19)); }
-	inline float get_burstMax_19() const { return ___burstMax_19; }
-	inline float* get_address_of_burstMax_19() { return &___burstMax_19; }
-	inline void set_burstMax_19(float value)
+	inline static int32_t get_offset_of_burstMin_19() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___burstMin_19)); }
+	inline float get_burstMin_19() const { return ___burstMin_19; }
+	inline float* get_address_of_burstMin_19() { return &___burstMin_19; }
+	inline void set_burstMin_19(float value)
 	{
-		___burstMax_19 = value;
+		___burstMin_19 = value;
 	}
 
-	inline static int32_t get_offset_of_rb_20() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___rb_20)); }
-	inline Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * get_rb_20() const { return ___rb_20; }
-	inline Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 ** get_address_of_rb_20() { return &___rb_20; }
-	inline void set_rb_20(Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * value)
+	inline static int32_t get_offset_of_burstMax_20() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___burstMax_20)); }
+	inline float get_burstMax_20() const { return ___burstMax_20; }
+	inline float* get_address_of_burstMax_20() { return &___burstMax_20; }
+	inline void set_burstMax_20(float value)
 	{
-		___rb_20 = value;
-		Il2CppCodeGenWriteBarrier((&___rb_20), value);
+		___burstMax_20 = value;
 	}
 
-	inline static int32_t get_offset_of_isRotating_21() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___isRotating_21)); }
-	inline bool get_isRotating_21() const { return ___isRotating_21; }
-	inline bool* get_address_of_isRotating_21() { return &___isRotating_21; }
-	inline void set_isRotating_21(bool value)
+	inline static int32_t get_offset_of_rb_21() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___rb_21)); }
+	inline Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * get_rb_21() const { return ___rb_21; }
+	inline Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 ** get_address_of_rb_21() { return &___rb_21; }
+	inline void set_rb_21(Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * value)
 	{
-		___isRotating_21 = value;
+		___rb_21 = value;
+		Il2CppCodeGenWriteBarrier((&___rb_21), value);
 	}
 
-	inline static int32_t get_offset_of_anim_22() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___anim_22)); }
-	inline Animator_tF1A88E66B3B731DDA75A066DBAE9C55837660F5A * get_anim_22() const { return ___anim_22; }
-	inline Animator_tF1A88E66B3B731DDA75A066DBAE9C55837660F5A ** get_address_of_anim_22() { return &___anim_22; }
-	inline void set_anim_22(Animator_tF1A88E66B3B731DDA75A066DBAE9C55837660F5A * value)
+	inline static int32_t get_offset_of_isRotating_22() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___isRotating_22)); }
+	inline bool get_isRotating_22() const { return ___isRotating_22; }
+	inline bool* get_address_of_isRotating_22() { return &___isRotating_22; }
+	inline void set_isRotating_22(bool value)
 	{
-		___anim_22 = value;
-		Il2CppCodeGenWriteBarrier((&___anim_22), value);
+		___isRotating_22 = value;
 	}
 
-	inline static int32_t get_offset_of_startTouch_23() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___startTouch_23)); }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_startTouch_23() const { return ___startTouch_23; }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_startTouch_23() { return &___startTouch_23; }
-	inline void set_startTouch_23(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	inline static int32_t get_offset_of_anim_23() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___anim_23)); }
+	inline Animator_tF1A88E66B3B731DDA75A066DBAE9C55837660F5A * get_anim_23() const { return ___anim_23; }
+	inline Animator_tF1A88E66B3B731DDA75A066DBAE9C55837660F5A ** get_address_of_anim_23() { return &___anim_23; }
+	inline void set_anim_23(Animator_tF1A88E66B3B731DDA75A066DBAE9C55837660F5A * value)
 	{
-		___startTouch_23 = value;
+		___anim_23 = value;
+		Il2CppCodeGenWriteBarrier((&___anim_23), value);
 	}
 
-	inline static int32_t get_offset_of_endTouch_24() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___endTouch_24)); }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_endTouch_24() const { return ___endTouch_24; }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_endTouch_24() { return &___endTouch_24; }
-	inline void set_endTouch_24(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	inline static int32_t get_offset_of_startTouch_24() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___startTouch_24)); }
+	inline Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  get_startTouch_24() const { return ___startTouch_24; }
+	inline Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * get_address_of_startTouch_24() { return &___startTouch_24; }
+	inline void set_startTouch_24(Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  value)
 	{
-		___endTouch_24 = value;
+		___startTouch_24 = value;
 	}
 
-	inline static int32_t get_offset_of_curTouch_25() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___curTouch_25)); }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_curTouch_25() const { return ___curTouch_25; }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_curTouch_25() { return &___curTouch_25; }
-	inline void set_curTouch_25(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	inline static int32_t get_offset_of_endTouch_25() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___endTouch_25)); }
+	inline Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  get_endTouch_25() const { return ___endTouch_25; }
+	inline Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * get_address_of_endTouch_25() { return &___endTouch_25; }
+	inline void set_endTouch_25(Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  value)
 	{
-		___curTouch_25 = value;
+		___endTouch_25 = value;
 	}
 
-	inline static int32_t get_offset_of_touchDistance_26() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___touchDistance_26)); }
-	inline float get_touchDistance_26() const { return ___touchDistance_26; }
-	inline float* get_address_of_touchDistance_26() { return &___touchDistance_26; }
-	inline void set_touchDistance_26(float value)
+	inline static int32_t get_offset_of_curTouch_26() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___curTouch_26)); }
+	inline Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  get_curTouch_26() const { return ___curTouch_26; }
+	inline Vector2_tA85D2DD88578276CA8A8796756458277E72D073D * get_address_of_curTouch_26() { return &___curTouch_26; }
+	inline void set_curTouch_26(Vector2_tA85D2DD88578276CA8A8796756458277E72D073D  value)
 	{
-		___touchDistance_26 = value;
+		___curTouch_26 = value;
 	}
 
-	inline static int32_t get_offset_of_minTouchDistance_27() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___minTouchDistance_27)); }
-	inline float get_minTouchDistance_27() const { return ___minTouchDistance_27; }
-	inline float* get_address_of_minTouchDistance_27() { return &___minTouchDistance_27; }
-	inline void set_minTouchDistance_27(float value)
+	inline static int32_t get_offset_of_touchDistance_27() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___touchDistance_27)); }
+	inline float get_touchDistance_27() const { return ___touchDistance_27; }
+	inline float* get_address_of_touchDistance_27() { return &___touchDistance_27; }
+	inline void set_touchDistance_27(float value)
 	{
-		___minTouchDistance_27 = value;
+		___touchDistance_27 = value;
 	}
 
-	inline static int32_t get_offset_of_isAlive_28() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___isAlive_28)); }
-	inline bool get_isAlive_28() const { return ___isAlive_28; }
-	inline bool* get_address_of_isAlive_28() { return &___isAlive_28; }
-	inline void set_isAlive_28(bool value)
+	inline static int32_t get_offset_of_minTouchDistance_28() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___minTouchDistance_28)); }
+	inline float get_minTouchDistance_28() const { return ___minTouchDistance_28; }
+	inline float* get_address_of_minTouchDistance_28() { return &___minTouchDistance_28; }
+	inline void set_minTouchDistance_28(float value)
 	{
-		___isAlive_28 = value;
+		___minTouchDistance_28 = value;
 	}
 
-	inline static int32_t get_offset_of_touchStartTime_29() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___touchStartTime_29)); }
-	inline float get_touchStartTime_29() const { return ___touchStartTime_29; }
-	inline float* get_address_of_touchStartTime_29() { return &___touchStartTime_29; }
-	inline void set_touchStartTime_29(float value)
+	inline static int32_t get_offset_of_isAlive_29() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___isAlive_29)); }
+	inline bool get_isAlive_29() const { return ___isAlive_29; }
+	inline bool* get_address_of_isAlive_29() { return &___isAlive_29; }
+	inline void set_isAlive_29(bool value)
 	{
-		___touchStartTime_29 = value;
+		___isAlive_29 = value;
 	}
 
-	inline static int32_t get_offset_of_touchEndTime_30() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___touchEndTime_30)); }
-	inline float get_touchEndTime_30() const { return ___touchEndTime_30; }
-	inline float* get_address_of_touchEndTime_30() { return &___touchEndTime_30; }
-	inline void set_touchEndTime_30(float value)
+	inline static int32_t get_offset_of_touchStartTime_30() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___touchStartTime_30)); }
+	inline float get_touchStartTime_30() const { return ___touchStartTime_30; }
+	inline float* get_address_of_touchStartTime_30() { return &___touchStartTime_30; }
+	inline void set_touchStartTime_30(float value)
 	{
-		___touchEndTime_30 = value;
+		___touchStartTime_30 = value;
 	}
 
-	inline static int32_t get_offset_of_touchMultiplier_31() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___touchMultiplier_31)); }
-	inline float get_touchMultiplier_31() const { return ___touchMultiplier_31; }
-	inline float* get_address_of_touchMultiplier_31() { return &___touchMultiplier_31; }
-	inline void set_touchMultiplier_31(float value)
+	inline static int32_t get_offset_of_touchEndTime_31() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___touchEndTime_31)); }
+	inline float get_touchEndTime_31() const { return ___touchEndTime_31; }
+	inline float* get_address_of_touchEndTime_31() { return &___touchEndTime_31; }
+	inline void set_touchEndTime_31(float value)
 	{
-		___touchMultiplier_31 = value;
+		___touchEndTime_31 = value;
 	}
 
-	inline static int32_t get_offset_of_maxTouchTime_32() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___maxTouchTime_32)); }
-	inline float get_maxTouchTime_32() const { return ___maxTouchTime_32; }
-	inline float* get_address_of_maxTouchTime_32() { return &___maxTouchTime_32; }
-	inline void set_maxTouchTime_32(float value)
+	inline static int32_t get_offset_of_touchMultiplier_32() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___touchMultiplier_32)); }
+	inline float get_touchMultiplier_32() const { return ___touchMultiplier_32; }
+	inline float* get_address_of_touchMultiplier_32() { return &___touchMultiplier_32; }
+	inline void set_touchMultiplier_32(float value)
 	{
-		___maxTouchTime_32 = value;
+		___touchMultiplier_32 = value;
 	}
 
-	inline static int32_t get_offset_of_minTouchMultiplier_33() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___minTouchMultiplier_33)); }
-	inline float get_minTouchMultiplier_33() const { return ___minTouchMultiplier_33; }
-	inline float* get_address_of_minTouchMultiplier_33() { return &___minTouchMultiplier_33; }
-	inline void set_minTouchMultiplier_33(float value)
+	inline static int32_t get_offset_of_maxTouchTime_33() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___maxTouchTime_33)); }
+	inline float get_maxTouchTime_33() const { return ___maxTouchTime_33; }
+	inline float* get_address_of_maxTouchTime_33() { return &___maxTouchTime_33; }
+	inline void set_maxTouchTime_33(float value)
 	{
-		___minTouchMultiplier_33 = value;
+		___maxTouchTime_33 = value;
 	}
 
-	inline static int32_t get_offset_of_newDelta_34() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___newDelta_34)); }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_newDelta_34() const { return ___newDelta_34; }
-	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_newDelta_34() { return &___newDelta_34; }
-	inline void set_newDelta_34(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	inline static int32_t get_offset_of_minTouchMultiplier_34() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___minTouchMultiplier_34)); }
+	inline float get_minTouchMultiplier_34() const { return ___minTouchMultiplier_34; }
+	inline float* get_address_of_minTouchMultiplier_34() { return &___minTouchMultiplier_34; }
+	inline void set_minTouchMultiplier_34(float value)
 	{
-		___newDelta_34 = value;
+		___minTouchMultiplier_34 = value;
 	}
 
-	inline static int32_t get_offset_of_rotSpeed_35() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___rotSpeed_35)); }
-	inline float get_rotSpeed_35() const { return ___rotSpeed_35; }
-	inline float* get_address_of_rotSpeed_35() { return &___rotSpeed_35; }
-	inline void set_rotSpeed_35(float value)
+	inline static int32_t get_offset_of_newDelta_35() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___newDelta_35)); }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_newDelta_35() const { return ___newDelta_35; }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_newDelta_35() { return &___newDelta_35; }
+	inline void set_newDelta_35(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
 	{
-		___rotSpeed_35 = value;
+		___newDelta_35 = value;
 	}
 
-	inline static int32_t get_offset_of_minTouch_36() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___minTouch_36)); }
-	inline float get_minTouch_36() const { return ___minTouch_36; }
-	inline float* get_address_of_minTouch_36() { return &___minTouch_36; }
-	inline void set_minTouch_36(float value)
+	inline static int32_t get_offset_of_rotSpeed_36() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___rotSpeed_36)); }
+	inline float get_rotSpeed_36() const { return ___rotSpeed_36; }
+	inline float* get_address_of_rotSpeed_36() { return &___rotSpeed_36; }
+	inline void set_rotSpeed_36(float value)
 	{
-		___minTouch_36 = value;
+		___rotSpeed_36 = value;
 	}
 
-	inline static int32_t get_offset_of_maxVelocity_37() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___maxVelocity_37)); }
-	inline float get_maxVelocity_37() const { return ___maxVelocity_37; }
-	inline float* get_address_of_maxVelocity_37() { return &___maxVelocity_37; }
-	inline void set_maxVelocity_37(float value)
+	inline static int32_t get_offset_of_minTouch_37() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___minTouch_37)); }
+	inline float get_minTouch_37() const { return ___minTouch_37; }
+	inline float* get_address_of_minTouch_37() { return &___minTouch_37; }
+	inline void set_minTouch_37(float value)
 	{
-		___maxVelocity_37 = value;
+		___minTouch_37 = value;
 	}
 
-	inline static int32_t get_offset_of_inputSoftener_38() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___inputSoftener_38)); }
-	inline float get_inputSoftener_38() const { return ___inputSoftener_38; }
-	inline float* get_address_of_inputSoftener_38() { return &___inputSoftener_38; }
-	inline void set_inputSoftener_38(float value)
+	inline static int32_t get_offset_of_maxVelocity_38() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___maxVelocity_38)); }
+	inline float get_maxVelocity_38() const { return ___maxVelocity_38; }
+	inline float* get_address_of_maxVelocity_38() { return &___maxVelocity_38; }
+	inline void set_maxVelocity_38(float value)
 	{
-		___inputSoftener_38 = value;
+		___maxVelocity_38 = value;
 	}
 
-	inline static int32_t get_offset_of_inputClamp_39() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___inputClamp_39)); }
-	inline float get_inputClamp_39() const { return ___inputClamp_39; }
-	inline float* get_address_of_inputClamp_39() { return &___inputClamp_39; }
-	inline void set_inputClamp_39(float value)
+	inline static int32_t get_offset_of_inputSoftener_39() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___inputSoftener_39)); }
+	inline float get_inputSoftener_39() const { return ___inputSoftener_39; }
+	inline float* get_address_of_inputSoftener_39() { return &___inputSoftener_39; }
+	inline void set_inputSoftener_39(float value)
 	{
-		___inputClamp_39 = value;
+		___inputSoftener_39 = value;
 	}
 
-	inline static int32_t get_offset_of_needToSlerp_40() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___needToSlerp_40)); }
-	inline bool get_needToSlerp_40() const { return ___needToSlerp_40; }
-	inline bool* get_address_of_needToSlerp_40() { return &___needToSlerp_40; }
-	inline void set_needToSlerp_40(bool value)
+	inline static int32_t get_offset_of_inputClamp_40() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___inputClamp_40)); }
+	inline float get_inputClamp_40() const { return ___inputClamp_40; }
+	inline float* get_address_of_inputClamp_40() { return &___inputClamp_40; }
+	inline void set_inputClamp_40(float value)
 	{
-		___needToSlerp_40 = value;
+		___inputClamp_40 = value;
 	}
 
-	inline static int32_t get_offset_of_slerpT_41() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___slerpT_41)); }
-	inline float get_slerpT_41() const { return ___slerpT_41; }
-	inline float* get_address_of_slerpT_41() { return &___slerpT_41; }
-	inline void set_slerpT_41(float value)
+	inline static int32_t get_offset_of_needToSlerp_41() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___needToSlerp_41)); }
+	inline bool get_needToSlerp_41() const { return ___needToSlerp_41; }
+	inline bool* get_address_of_needToSlerp_41() { return &___needToSlerp_41; }
+	inline void set_needToSlerp_41(bool value)
 	{
-		___slerpT_41 = value;
+		___needToSlerp_41 = value;
 	}
 
-	inline static int32_t get_offset_of_slerpTStamp_42() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___slerpTStamp_42)); }
-	inline float get_slerpTStamp_42() const { return ___slerpTStamp_42; }
-	inline float* get_address_of_slerpTStamp_42() { return &___slerpTStamp_42; }
-	inline void set_slerpTStamp_42(float value)
+	inline static int32_t get_offset_of_slerpT_42() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___slerpT_42)); }
+	inline float get_slerpT_42() const { return ___slerpT_42; }
+	inline float* get_address_of_slerpT_42() { return &___slerpT_42; }
+	inline void set_slerpT_42(float value)
 	{
-		___slerpTStamp_42 = value;
+		___slerpT_42 = value;
 	}
 
-	inline static int32_t get_offset_of_kickDetermineForce_43() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___kickDetermineForce_43)); }
-	inline float get_kickDetermineForce_43() const { return ___kickDetermineForce_43; }
-	inline float* get_address_of_kickDetermineForce_43() { return &___kickDetermineForce_43; }
-	inline void set_kickDetermineForce_43(float value)
+	inline static int32_t get_offset_of_slerpTStamp_43() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___slerpTStamp_43)); }
+	inline float get_slerpTStamp_43() const { return ___slerpTStamp_43; }
+	inline float* get_address_of_slerpTStamp_43() { return &___slerpTStamp_43; }
+	inline void set_slerpTStamp_43(float value)
 	{
-		___kickDetermineForce_43 = value;
+		___slerpTStamp_43 = value;
 	}
 
-	inline static int32_t get_offset_of_kickCDTime_44() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___kickCDTime_44)); }
-	inline float get_kickCDTime_44() const { return ___kickCDTime_44; }
-	inline float* get_address_of_kickCDTime_44() { return &___kickCDTime_44; }
-	inline void set_kickCDTime_44(float value)
+	inline static int32_t get_offset_of_kickDetermineForce_44() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___kickDetermineForce_44)); }
+	inline float get_kickDetermineForce_44() const { return ___kickDetermineForce_44; }
+	inline float* get_address_of_kickDetermineForce_44() { return &___kickDetermineForce_44; }
+	inline void set_kickDetermineForce_44(float value)
 	{
-		___kickCDTime_44 = value;
+		___kickDetermineForce_44 = value;
 	}
 
-	inline static int32_t get_offset_of_kickCDStamp_45() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___kickCDStamp_45)); }
-	inline float get_kickCDStamp_45() const { return ___kickCDStamp_45; }
-	inline float* get_address_of_kickCDStamp_45() { return &___kickCDStamp_45; }
-	inline void set_kickCDStamp_45(float value)
+	inline static int32_t get_offset_of_kickCDTime_45() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___kickCDTime_45)); }
+	inline float get_kickCDTime_45() const { return ___kickCDTime_45; }
+	inline float* get_address_of_kickCDTime_45() { return &___kickCDTime_45; }
+	inline void set_kickCDTime_45(float value)
 	{
-		___kickCDStamp_45 = value;
+		___kickCDTime_45 = value;
 	}
 
-	inline static int32_t get_offset_of_kickForce_46() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___kickForce_46)); }
-	inline float get_kickForce_46() const { return ___kickForce_46; }
-	inline float* get_address_of_kickForce_46() { return &___kickForce_46; }
-	inline void set_kickForce_46(float value)
+	inline static int32_t get_offset_of_kickCDStamp_46() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___kickCDStamp_46)); }
+	inline float get_kickCDStamp_46() const { return ___kickCDStamp_46; }
+	inline float* get_address_of_kickCDStamp_46() { return &___kickCDStamp_46; }
+	inline void set_kickCDStamp_46(float value)
 	{
-		___kickForce_46 = value;
+		___kickCDStamp_46 = value;
 	}
 
-	inline static int32_t get_offset_of_bigKickForce_47() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___bigKickForce_47)); }
-	inline float get_bigKickForce_47() const { return ___bigKickForce_47; }
-	inline float* get_address_of_bigKickForce_47() { return &___bigKickForce_47; }
-	inline void set_bigKickForce_47(float value)
+	inline static int32_t get_offset_of_kickForce_47() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___kickForce_47)); }
+	inline float get_kickForce_47() const { return ___kickForce_47; }
+	inline float* get_address_of_kickForce_47() { return &___kickForce_47; }
+	inline void set_kickForce_47(float value)
 	{
-		___bigKickForce_47 = value;
+		___kickForce_47 = value;
 	}
 
-	inline static int32_t get_offset_of_canKick_48() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___canKick_48)); }
-	inline bool get_canKick_48() const { return ___canKick_48; }
-	inline bool* get_address_of_canKick_48() { return &___canKick_48; }
-	inline void set_canKick_48(bool value)
+	inline static int32_t get_offset_of_bigKickForce_48() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___bigKickForce_48)); }
+	inline float get_bigKickForce_48() const { return ___bigKickForce_48; }
+	inline float* get_address_of_bigKickForce_48() { return &___bigKickForce_48; }
+	inline void set_bigKickForce_48(float value)
 	{
-		___canKick_48 = value;
+		___bigKickForce_48 = value;
 	}
 
-	inline static int32_t get_offset_of_mediumTouch_49() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___mediumTouch_49)); }
-	inline float get_mediumTouch_49() const { return ___mediumTouch_49; }
-	inline float* get_address_of_mediumTouch_49() { return &___mediumTouch_49; }
-	inline void set_mediumTouch_49(float value)
+	inline static int32_t get_offset_of_canKick_49() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___canKick_49)); }
+	inline bool get_canKick_49() const { return ___canKick_49; }
+	inline bool* get_address_of_canKick_49() { return &___canKick_49; }
+	inline void set_canKick_49(bool value)
 	{
-		___mediumTouch_49 = value;
+		___canKick_49 = value;
+	}
+
+	inline static int32_t get_offset_of_mediumTouch_50() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___mediumTouch_50)); }
+	inline float get_mediumTouch_50() const { return ___mediumTouch_50; }
+	inline float* get_address_of_mediumTouch_50() { return &___mediumTouch_50; }
+	inline void set_mediumTouch_50(float value)
+	{
+		___mediumTouch_50 = value;
+	}
+
+	inline static int32_t get_offset_of_maxDragDistance_51() { return static_cast<int32_t>(offsetof(swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211, ___maxDragDistance_51)); }
+	inline float get_maxDragDistance_51() const { return ___maxDragDistance_51; }
+	inline float* get_address_of_maxDragDistance_51() { return &___maxDragDistance_51; }
+	inline void set_maxDragDistance_51(float value)
+	{
+		___maxDragDistance_51 = value;
 	}
 };
 
@@ -11656,16 +11752,23 @@ extern const int32_t g_FieldOffsetTable3568[8] =
 	moveEnemy_tEDBFDE1148A2AB16DD72DB830DBD0FC4ECAA5A13::get_offset_of_isAgro_11(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3569 = { sizeof (PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3569[8] = 
+extern const int32_t g_FieldOffsetTable3569[15] = 
 {
 	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_rb_4(),
 	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_maxDragDistance_5(),
 	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_maxSpeed_6(),
 	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_accelerationSpeed_7(),
 	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_decelerationSpeed_8(),
-	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_tapStartPosition_9(),
-	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_moveSpeed_10(),
-	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_lastPlayerInput_11(),
+	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_rotationSpeed_9(),
+	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_dashForce_10(),
+	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_dashMaxSpeed_11(),
+	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_dashSwipeLength_12(),
+	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_kickCD_13(),
+	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_tapStartPosition_14(),
+	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_moveSpeed_15(),
+	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_lastPlayerInput_16(),
+	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_canKick_17(),
+	PlayerMovement_t433CEDF390E132D7701A276CCC30080251C6BC2C::get_offset_of_kickCDStamp_18(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3570 = { sizeof (ragdollController_tA63C76C2CA648A7EE755B6A9CD7438C905D65DBC), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable3570[8] = 
@@ -11686,7 +11789,7 @@ extern const int32_t g_FieldOffsetTable3571[2] =
 	rotatePlayer_tECF3CACB28ABBE3F0F7297B541F6EA01170350FB::get_offset_of_camHeight_5(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3572 = { sizeof (swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3572[46] = 
+extern const int32_t g_FieldOffsetTable3572[48] = 
 {
 	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_peddleSpeed_4(),
 	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_ddrag_5(),
@@ -11700,40 +11803,42 @@ extern const int32_t g_FieldOffsetTable3572[46] =
 	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_dsmallKickForce_13(),
 	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_dbigKickForce_14(),
 	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_dkickCD_15(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_burstForce_16(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_burstMultiplier_17(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_burstMin_18(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_burstMax_19(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_rb_20(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_isRotating_21(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_anim_22(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_startTouch_23(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_endTouch_24(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_curTouch_25(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_touchDistance_26(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_minTouchDistance_27(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_isAlive_28(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_touchStartTime_29(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_touchEndTime_30(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_touchMultiplier_31(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_maxTouchTime_32(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_minTouchMultiplier_33(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_newDelta_34(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_rotSpeed_35(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_minTouch_36(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_maxVelocity_37(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_inputSoftener_38(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_inputClamp_39(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_needToSlerp_40(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_slerpT_41(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_slerpTStamp_42(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_kickDetermineForce_43(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_kickCDTime_44(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_kickCDStamp_45(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_kickForce_46(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_bigKickForce_47(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_canKick_48(),
-	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_mediumTouch_49(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_dMaxDragouch_16(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_burstForce_17(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_burstMultiplier_18(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_burstMin_19(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_burstMax_20(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_rb_21(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_isRotating_22(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_anim_23(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_startTouch_24(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_endTouch_25(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_curTouch_26(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_touchDistance_27(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_minTouchDistance_28(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_isAlive_29(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_touchStartTime_30(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_touchEndTime_31(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_touchMultiplier_32(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_maxTouchTime_33(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_minTouchMultiplier_34(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_newDelta_35(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_rotSpeed_36(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_minTouch_37(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_maxVelocity_38(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_inputSoftener_39(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_inputClamp_40(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_needToSlerp_41(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_slerpT_42(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_slerpTStamp_43(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_kickDetermineForce_44(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_kickCDTime_45(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_kickCDStamp_46(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_kickForce_47(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_bigKickForce_48(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_canKick_49(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_mediumTouch_50(),
+	swipeToMove_t1F4BBE2F833ECF7234CAFC55BF86E9614345C211::get_offset_of_maxDragDistance_51(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3573 = { sizeof (wallDetector_tC089957E4E40D99DC9F962C58190877304518F59), -1, 0, 0 };
 #ifdef __clang__

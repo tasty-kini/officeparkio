@@ -39,7 +39,7 @@ public class collisionDetector : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
 
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
 
         //Debug.Log(collision.relativeVelocity.magnitude);
         if(!onColCD)
@@ -59,7 +59,7 @@ public class collisionDetector : MonoBehaviour
                 }
                 else
                 {
-                    if (collision.relativeVelocity.magnitude > fallOffVel && GetComponent<swipeToMove>().isAlive)
+                    if (collision.relativeVelocity.magnitude > fallOffVel)// && GetComponent<swipeToMove>().isAlive)
                     {
                         newCalculateProbability(collision);
                     }
@@ -176,7 +176,7 @@ public class collisionDetector : MonoBehaviour
     public void calculateProbability(Collision c)
     {
 
-
+        
 
         if(c.gameObject.tag == "Player")
         {
@@ -224,6 +224,8 @@ public class collisionDetector : MonoBehaviour
 
     public void newCalculateProbability(Collision c)
     {
+        Debug.Log("calculating");
+
         float chance = basicProbability + (extraChance * (c.relativeVelocity.magnitude / maxVel));
         if (chance > basicProbability + extraChance)
         {

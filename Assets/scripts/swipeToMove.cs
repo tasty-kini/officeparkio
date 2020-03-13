@@ -120,7 +120,7 @@ public class swipeToMove : MonoBehaviour
             if (inputDiff.magnitude > minTouch) //ensure big enough touch is made
             {
                 if (inputDiff.magnitude > inputClamp) inputDiff = inputDiff.normalized * inputClamp; //clamp big values
-                newDelta = new Vector3(inputDiff.x, 0, inputDiff.y);
+                newDelta = new Vector3(playerInput.x, 0, playerInput.y);
             }
 
             peddleForward(newDelta.normalized); // smooth movement towards touch

@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{7340122D-2925-4E65-1743-48CFD9FC8E08}|">
   <MonoDevelop.Ide.ItemProperties.ABManager PreferredExecutionTarget="c3240e07-7c22-4a6e-a69b-c96a622fbfbd" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/swipeToMove.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PlayerMovement.cs">
     <Files>
-      <File FileName="Assets/scripts/swipeToMove.cs" Line="86" Column="41" />
-      <File FileName="Assets/scripts/PlayerMovement.cs" Line="42" Column="25" />
+      <File FileName="Assets/scripts/swipeToMove.cs" Line="114" Column="61" />
+      <File FileName="Assets/scripts/PlayerMovement.cs" Line="44" Column="1" />
+      <File FileName="Assets/scripts/collisionDetector.cs" Line="42" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +12,7 @@
           <Node name="Office Park IO" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="scripts" expanded="True">
-                <Node name="swipeToMove.cs" selected="True" />
+                <Node name="PlayerMovement.cs" selected="True" />
               </Node>
             </Node>
           </Node>

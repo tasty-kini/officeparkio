@@ -1690,6 +1690,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Rigidbody_MovePosition_Injected();
 		Register_UnityEngine_Rigidbody_MovePosition_Injected();
 
+		//System.Void UnityEngine.Rigidbody::MoveRotation_Injected(UnityEngine.Quaternion&)
+		void Register_UnityEngine_Rigidbody_MoveRotation_Injected();
+		Register_UnityEngine_Rigidbody_MoveRotation_Injected();
+
 		//System.Void UnityEngine.Rigidbody::get_velocity_Injected(UnityEngine.Vector3&)
 		void Register_UnityEngine_Rigidbody_get_velocity_Injected();
 		Register_UnityEngine_Rigidbody_get_velocity_Injected();
@@ -2145,6 +2149,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Single UnityEngine.Time::get_fixedDeltaTime()
 		void Register_UnityEngine_Time_get_fixedDeltaTime();
 		Register_UnityEngine_Time_get_fixedDeltaTime();
+
+		//System.Single UnityEngine.Time::get_fixedTime()
+		void Register_UnityEngine_Time_get_fixedTime();
+		Register_UnityEngine_Time_get_fixedTime();
 
 		//System.Single UnityEngine.Time::get_realtimeSinceStartup()
 		void Register_UnityEngine_Time_get_realtimeSinceStartup();
