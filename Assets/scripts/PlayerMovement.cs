@@ -7,8 +7,11 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;
 
-    public DebugFloat maxDragDistance;
-    public DebugFloat maxSpeed, accelerationSpeed = 1f, decelerationSpeed = 1f, rotationSpeed = 4f, dashForce = 50f, dashMaxSpeed = 200f, dashSwipeLength = 300, kickCD = .25f;
+    public DebugFloat maxDragDistance = 200f;
+    public DebugFloat maxSpeed = 50f, accelerationSpeed = 225f, decelerationSpeed = 30f, rotationSpeed = 10f, dashForce = 35f,  dashSwipeLength = 225f, kickCD = .25f;
+
+    public DebugFloat dMaxSpeed = 50f;
+
 
     private Vector2 tapStartPosition;
 
@@ -23,11 +26,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         DebugMenu.instance.CreateDebugSlider("Max Drag Dist", Color.black, maxDragDistance, 400, 0);
-        DebugMenu.instance.CreateDebugSlider("Max Speed", Color.black, maxSpeed, 80, 0);
-        DebugMenu.instance.CreateDebugSlider("Acceleration Speed", Color.black, accelerationSpeed, 300, 0);
-        DebugMenu.instance.CreateDebugSlider("Deceleration Speed", Color.black, decelerationSpeed, 100, 0);
+        DebugMenu.instance.CreateDebugSlider("Max Speed", Color.black, maxSpeed, 80, 1);
+        DebugMenu.instance.CreateDebugSlider("Acceleration Speed", Color.black, accelerationSpeed, 300, 1);
+        DebugMenu.instance.CreateDebugSlider("Deceleration Speed", Color.black, decelerationSpeed, 100, 1);
         DebugMenu.instance.CreateDebugSlider("Rotation Speed", Color.black, rotationSpeed, 10, 0);
-        DebugMenu.instance.CreateDebugSlider("dash Force", Color.black, dashForce, 150, 0);
+        DebugMenu.instance.CreateDebugSlider("dash Force", Color.black, dashForce, 50, 0);
         DebugMenu.instance.CreateDebugSlider("dash swipe length", Color.black, dashSwipeLength, 500, 100);
         DebugMenu.instance.CreateDebugSlider("dash cooldown", Color.black, kickCD, 1, 0);
     }
@@ -57,22 +60,22 @@ public class PlayerMovement : MonoBehaviour
                 //Debug.Log("change start");
                 tapStartPosition = currentTapLocation - inputDiff.normalized * maxDragDistance; //change the new "start" touch location for more accurate measurements
             }
-
+            // check to see if player swipes to do a big kick in that direction
             if (Input.GetTouch(0).phase == TouchPhase.Ended) 
              {
-                if (inputDiff.magnitude >= dashSwipeLength)
-                {
-                   //doKick();
-                }
-             }
-
-            if (inputDiff.magnitude >= dashSwipeLength)
-                {
-                    if(canKick)
+                if(canKick)
                     {
                         doKick(new Vector3(inputDiff.x, 0, inputDiff.y).normalized);
                     }  
-                }
+             }
+
+            if (inputDiff.magnitude >= dashSwipeLength)
+            {
+                if(canKick)
+                {
+                    doKick(new Vector3(inputDiff.x, 0, inputDiff.y).normalized);
+                }  
+            }
 
             float t = inputDiff.magnitude / maxDragDistance; //percentage of max speed, max drag distance is edge of joystick
             float targetMoveSpeed = Mathf.Lerp(0f, maxSpeed, t); // target speed is based on the above percentage and maxspeed
@@ -103,6 +106,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.AddForce(newDir * dashForce, ForceMode.VelocityChange);
         kickCDStamp = Time.fixedTime + kickCD;
+        Quaternion newLook = Quaternion.LookRotation(newDir);
+        rb.MoveRotation(Quaternion.Lerp(transform.rotation, newLook, rotationSpeed * Time.deltaTime)); 
         canKick = false;
     }
 }

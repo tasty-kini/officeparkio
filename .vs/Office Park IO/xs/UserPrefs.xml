@@ -1,10 +1,8 @@
 ﻿<Properties StartupConfiguration="{7340122D-2925-4E65-1743-48CFD9FC8E08}|">
-  <MonoDevelop.Ide.ItemProperties.ABManager PreferredExecutionTarget="c3240e07-7c22-4a6e-a69b-c96a622fbfbd" />
+  <MonoDevelop.Ide.ItemProperties.ABManager PreferredExecutionTarget="8da554f9-691e-4c3a-8875-069db4ca5940" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PlayerMovement.cs">
     <Files>
-      <File FileName="Assets/scripts/swipeToMove.cs" Line="114" Column="61" />
-      <File FileName="Assets/scripts/PlayerMovement.cs" Line="44" Column="1" />
-      <File FileName="Assets/scripts/collisionDetector.cs" Line="42" Column="11" />
+      <File FileName="Assets/scripts/PlayerMovement.cs" Line="7" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

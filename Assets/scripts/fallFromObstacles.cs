@@ -34,7 +34,7 @@ public class fallFromObstacles : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
         if (!onColCD)
         {
             if (isPlayer)
@@ -112,8 +112,10 @@ public class fallFromObstacles : MonoBehaviour
     {
         if(isPlayer)
         {
-            Debug.Log("bump");
+            Debug.Log("bump " + transform.rotation.eulerAngles * bumpForce);
             o.GetComponent<Rigidbody>().AddForce(transform.rotation.eulerAngles * bumpForce, ForceMode.VelocityChange);
+            GetComponent<Rigidbody>().AddForce(transform.rotation.eulerAngles * -bumpForce, ForceMode.VelocityChange);
+
         }
         
     }

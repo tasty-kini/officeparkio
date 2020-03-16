@@ -145,20 +145,17 @@ public class enemySwiper : MonoBehaviour
             {
                 if(p.GetComponent<collisionDetector>().isPlayer)
                 {
-                    if(p.GetComponent<swipeToMove>().isAlive)
+                    if (closestTarget == null)
                     {
-                        if(closestTarget == null)
+                        closestTarget = p;
+                        closestTargetDistance = Vector3.Distance(transform.position, p.transform.position);
+                    }
+                    else
+                    {
+                        if (Vector3.Distance(transform.position, p.transform.position) < closestTargetDistance)
                         {
                             closestTarget = p;
                             closestTargetDistance = Vector3.Distance(transform.position, p.transform.position);
-                        }
-                        else
-                        {
-                            if(Vector3.Distance(transform.position, p.transform.position) < closestTargetDistance)
-                            {
-                                closestTarget = p;
-                                closestTargetDistance = Vector3.Distance(transform.position, p.transform.position);
-                            }
                         }
                     }
 

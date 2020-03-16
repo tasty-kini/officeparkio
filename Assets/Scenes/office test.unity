@@ -1419,7 +1419,7 @@ PrefabInstance:
     - target: {fileID: 5225488576918020932, guid: 6fdb94051ac684a60a89c8e1f99c37d9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00003547509
+      value: 0.000033801993
       objectReference: {fileID: 0}
     - target: {fileID: 5225488576918020932, guid: 6fdb94051ac684a60a89c8e1f99c37d9,
         type: 3}
@@ -20250,6 +20250,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7647363140258318185}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &5138103069064814501 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 3273784629784516855, guid: 8b6ad761be08e4e1eadd7076808e8ba7,
+    type: 3}
+  m_PrefabInstance: {fileID: 7647363140258318185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5138103069064814506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20288,25 +20294,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c4f8eadf9264a179efba11edfa0831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 5138103069064814501}
   maxDragDistance:
-    value: 0
-  maxSpeed:
-    value: 0
-  accelerationSpeed:
-    value: 1
-  decelerationSpeed:
-    value: 1
-  rotationSpeed:
-    value: 4
-  dashForce:
-    value: 10
-  dashMaxSpeed:
     value: 200
+  maxSpeed:
+    value: 40
+  accelerationSpeed:
+    value: 225
+  decelerationSpeed:
+    value: 30
+  rotationSpeed:
+    value: 10
+  dashForce:
+    value: 35
   dashSwipeLength:
-    value: 300
+    value: 250
   kickCD:
     value: 0.25
+  dMaxSpeed:
+    value: 50
   canKick: 0
 --- !u!114 &5138103069064814508
 MonoBehaviour:

@@ -48,7 +48,7 @@ public class collisionDetector : MonoBehaviour
             {
                 if (collision.gameObject.tag == "Player") //when colliding with other players, only the slower player has a chance to fall off
                 {
-                    Debug.Log("myvel: " + myVel + ", other player vel: " + collision.gameObject.GetComponent<Rigidbody>().velocity.magnitude);
+                   // Debug.Log("myvel: " + myVel + ", other player vel: " + collision.gameObject.GetComponent<Rigidbody>().velocity.magnitude);
 
                     if (myVel < collision.gameObject.GetComponent<collisionDetector>().myVel && GetComponent<swipeToMove>().isAlive)
                     {
